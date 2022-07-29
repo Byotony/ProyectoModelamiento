@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+    {% block title %}
+    <title>MonteCarlo Ejemplo</title>
+    {% endblock %}
+
+    {% block content %}
+    
+<div class="centrartablas" style="text-align: center;">
+    <br><h1>Tabla de datos</h1><br>
+
+    <p>Se nos dan los siguientes datos de "DEMANDA" y "PROBABILIDAD" las cuales son mostradas mediante del DataFrame de Pandas, el código de ejecución sería de la siguiente manera:</p>
+    <p>datos = pd.DataFrame(); demanda = [100, 200, 300, 400, 500, 600]; probabilidad = [0.15, 0.25, 0.18, 0.22, 0.13, 0.07]</p><br>
+        {{data | safe}}
+
+    <br><p>Ahora se calcula la probabilidad acumulada con una función "FOR" que nos permita recorrer los datos de probabilidad para así sumar el datos actual con el siguiente.</p><br>
+        {{data2 | safe}}
+
+    <br><p>Luego tenemos que hacer en esta tabla es definir los limites minimos y maximos para poder usarlo mas adelante</p><br>
+        {{data3 | safe}}
+
+    <br><p>En esta parte ya realizamos una resta para equilibrar "MIN"</p><br>
+        {{data4 | safe}}
+
+    <br><p>Se imprimen los Números Aleatorios que fueron indicados.</p><br>
+        {{data5 | safe}}
+
+    <br><p>Se coloca la demanda dependiendo de la probabilidad</p><br>
+        {{data6 | safe}}
+    <br>
+
+    <br><p>Se suman las demandas generadas (5900), y se divide para la cantidad de aparatos que realiza un operario (28).</p><br>
+        <h2>{{data7 | safe}}</h2>
+    <br>
+
+    <br><p>Se redondea hacia adelante el resultado, nos quedaría</p><br>
+        <h2>211</h2>
+    <br><p><b>R//. 211</b> operarios se necesitarán en los próximos 20 días trabajando a full sin tener tiempo de ocio.</p><br>
+
+</div>
+
+    {% endblock %}

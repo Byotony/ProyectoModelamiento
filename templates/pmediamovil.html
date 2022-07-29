@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+    {% block title %}
+    <title>Media Móvil</title>
+    {% endblock %}
+
+    {% block content %}
+    <div class="" style="text-align: center;">
+        <br><br><h1>MEDIA MÓVIL</h1><br>
+
+
+        <div class="centrartablas" style="text-align: center;">
+            <h2><legend class="text-left header">Tabla de resultados</legend></h2><br>
+            {{data | safe}}
+            <br>
+        
+            <h2><legend class="text-left header">Filtro de datos</legend></h2><br>
+            {{movil | safe}}
+            <br>
+        
+            <h2><legend class="text-left header">Media y Errores</legend></h2><br>
+            {{movillle | safe}}
+            <br>
+        </div>
+
+            <div class="container" style="text-align: center;">
+        
+                <h2><legend class="text-left header">Gráfica</legend></h2>
+                <div class="card">
+                    <center><img src="data:image/png;base64,{{ image }}"></center>
+                </div>
+            </div><br>
+
+            <!-- <div class="centrartablas" style="text-align: center;">
+                <h2><legend class="text-left header">Tabla de resultados</legend></h2><br>
+                {{tabla2 | safe}}
+                <br>
+            </div>
+
+            <div class="container" style="text-align: center;">
+        
+                <h2><legend class="text-left header">Gráfica</legend></h2>
+                <div class="card">
+                    <center><img src="data:image/png;base64,{{ image2 }}"></center>
+                </div>
+            </div><br>
+
+            <div class="container" style="text-align: center;">
+        
+                <h2><legend class="text-left header">Gráfica</legend></h2>
+                <div class="card">
+                    <center><img src="data:image/png;base64,{{ image3 }}"></center>
+                </div>
+            </div><br>
+
+            <div class="centrartablas" style="text-align: center;">
+                <h2><legend class="text-left header">Tabla de resultados</legend></h2><br>
+                {{tabla3 | safe}}
+                <br>
+            </div>
+
+            <div class="container" style="text-align: center;">
+        
+                <h2><legend class="text-left header">Gráfica</legend></h2>
+                <div class="card">
+                    <center><img src="data:image/png;base64,{{ image4 }}"></center>
+                </div>
+            </div><br> -->
+
+    {% endblock %}

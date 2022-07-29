@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+    {% block title %}
+    <title>Cuadrados Medios</title>
+    {% endblock %}
+
+    {% block content %}
+    <br><br><h1 style="text-align: center;">CUADRADOS MEDIOS</h1>
+    
+    <div class="container" style="text-align: center;">
+        
+        <div class="card">
+            <form method="POST" action="{{url_for('mcuadradosmedios')}}"><br>
+                <div class="col-sm-12">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01">Número iteraciones (n)</label>
+                            <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                                required>
+                        </div>
+                        <br>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02">Semilla (X0)</label>
+                            <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                        </div>
+                    </div><br>
+                    <button class="btn btn-danger" type="submit">Calcular</button>
+                </div>
+            </form><br>
+        </div>
+    </div><br>
+    {% if data %}
+    <div class="centrartablas" style="text-align: center;">
+    <h2><legend class="text-left header">Tabla de resultados</legend></h2><br>
+    {{data | safe}}
+    </div><br>
+
+    <div class="container" style="text-align: center;">
+
+        <h2><legend class="text-left header">Gráfico</legend></h2>
+        <div class="card">
+            <center><img src="data:image/png;base64,{{ image }}"></center>
+        </div>
+    </div><br>
+    {% else %}
+    {% endif %}
+    {% endblock %}

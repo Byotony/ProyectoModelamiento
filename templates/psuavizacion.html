@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+    {% block title %}
+    <title>Suavización</title>
+    {% endblock %}
+
+    {% block content %}
+    
+<div class="centrartablas" style="text-align: center;">
+    <br><h1>Tabla de datos</h1><br>
+    <br>
+        {{tabla | safe}}
+        {{ dt1 | safe }}
+        {{dt2 | safe}}
+</div> <br><br>
+
+<div class="container" style="text-align: center;">
+    <h1><legend class="text-left header">Gráfico</legend></h1>
+    <div class="card">
+        <center><img src="data:image/png;base64,{{ image }}"></center>
+    </div>
+</div><br>
+
+    {% endblock %}
